@@ -3,11 +3,13 @@ package com.microservices.Expenses.service;
 import com.microservices.Expenses.exception.ResourceNotFoundException;
 import com.microservices.Expenses.model.Expense;
 import com.microservices.Expenses.repository.ExpenseRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+@Slf4j //when this service will be called while it's taking long time before responding
 public class ExpenseServiceImpl implements ExpenseService {
     private final ExpenseRepository expenseRepository;
     @Autowired

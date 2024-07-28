@@ -4,6 +4,7 @@ import com.microservices.Expenses.model.Expense;
 
 import java.util.List;
 
+
 public interface ExpenseService {
     Expense addExpense(Expense expense);
     Expense updateExpense(Long idExpense, Expense updatedExpense);
